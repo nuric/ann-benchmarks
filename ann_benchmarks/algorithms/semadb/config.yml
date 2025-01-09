@@ -1,0 +1,26 @@
+float:
+  any:
+    - base_args: ["@metric"]
+      constructor: SemaDBLocal
+      # constructor: SemaDBRemote
+      disabled: false
+      docker_tag: ann-benchmarks-semadb
+      module: ann_benchmarks.algorithms.semadb
+      name: semadb
+      run_groups:
+        base:
+          args: [["none", "bq", "pq"]]
+          # args: [["none"]]
+bit:
+  hamming:
+    - base_args: ["@metric"]
+      constructor: SemaDBLocal
+      # constructor: SemaDBRemote
+      disabled: false
+      docker_tag: ann-benchmarks-semadb
+      module: ann_benchmarks.algorithms.semadb
+      name: semadb
+      run_groups:
+        base:
+          args: [["none"]]
+          # args: [["none"]]
